@@ -63,7 +63,7 @@ c = tk.BooleanVar(value=False)
 
 # show number of disks
 nlabel = tk.Label(gui, textvariable=text)
-nlabel.grid(column=1,row=0)
+nlabel.grid(column=1,row=0,ipady=10)
 
 instructions = tk.Label(gui, text="Use the arrows above to change the number of disks in the tower.\n\
     Check the Color box to toggle colored disks.\n\
@@ -76,19 +76,19 @@ instructions = tk.Label(gui, text="Use the arrows above to change the number of 
     2: Only the top disk on a stack can be taken and placed on the top of another.\n\
     3: No disk may be placed on top of a smaller disk.\n\n\
     This simulation limits the number of disks from 3 to 12 inclusive.")
-instructions.grid(column=0,row=4,columnspan=3)
+instructions.grid(column=0,row=4,columnspan=3,ipady=10)
 
 increasebutton = tk.Button(gui, text=">", command=increase)
-increasebutton.grid(column=2,row=0)
+increasebutton.grid(column=2,row=0,ipady=10)
 
 decreasebutton = tk.Button(gui, text='<', command=decrease)
-decreasebutton.grid(column=0,row=0)
+decreasebutton.grid(column=0,row=0,ipady=10)
 
 startbutton = tk.Button(gui, text='Start', command=kill)
-startbutton.grid(column=1,row=3)
+startbutton.grid(column=1,row=3,ipady=10)
 
 colorbox = tk.Checkbutton(gui,text='Color',variable=c,onvalue=True)
-colorbox.grid(column=1,row=2)
+colorbox.grid(column=1,row=2,ipady=10)
 
 gui.mainloop()
 
