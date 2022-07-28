@@ -51,8 +51,9 @@ def kill(): # kill gui
 
 # tk root
 gui = tk.Tk()
-gui.geometry('500x100')  
+gui.geometry('660x350')  
 gui.title('Tower of Hanoi Config')
+gui.option_add('*Font', '20')
 
 text = tk.StringVar()
 text.set('Disks: '+str(n))
@@ -67,7 +68,14 @@ nlabel.grid(column=1,row=0)
 instructions = tk.Label(gui, text="Use the arrows above to change the number of disks in the tower.\n\
     Check the Color box to toggle colored disks.\n\
     When ready, press Start.\n\
-    Use the up and down arrow keys to change the speed of the animation.")
+    Use the up and down arrow keys to change the speed of the animation.\n\n\
+    The Tower of Hanoi is a puzzle with 3 pegs and a certain number of\n\
+    differently sized disks stacked on the first peg in decreasing order of size.\n\
+    The goal is to move this stack to the third peg under these rules:\n\n\
+    1: Only one disk can be moved at a time.\n\
+    2: Only the top disk on a stack can be taken and placed on the top of another.\n\
+    3: No disk may be placed on top of a smaller disk.\n\n\
+    This simulation limits the number of disks from 3 to 12 inclusive.")
 instructions.grid(column=0,row=4,columnspan=3)
 
 increasebutton = tk.Button(gui, text=">", command=increase)
